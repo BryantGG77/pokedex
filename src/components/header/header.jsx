@@ -3,7 +3,8 @@ import { CiSearch } from "react-icons/ci";
 export const Header = () => {
   return (
     <header className="flex flex-col justify-center items-center gap-4 w-full py-8 px-3 sm:px-4 bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 text-center overflow-hidden">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-500 break-words">
+
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-500 break-words">
         Pokédex
       </h1>
 
