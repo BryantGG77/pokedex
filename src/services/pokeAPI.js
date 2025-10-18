@@ -1,5 +1,0 @@
-
-
-function mostrarCards () {
-    fetch 
-}
