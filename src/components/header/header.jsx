@@ -8,7 +8,7 @@ export const Header = () => {
         Pokédex
       </h1>
 
-      <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-xl">
+      <p className="text-gray-700 sm:text-lg md:text-xl lg:text-2xl max-w-md sm:max-w-xl">
         Descubre y explora todos los Pokémon de la primera generación
       </p>
 

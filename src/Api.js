@@ -1,14 +1,53 @@
 
 export const listaDePokemons = async (limit) => {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
-  const data = await res.json();
-  return data.results; // devuelve array de {name, url}
+  try {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemonx?limit=${limit}`);
+    if (!res.ok) {
+      throw new Error(`Error al obtener la lista de Pokémon: Error ${res.status}`)
+    }
+    const data = await res.json();
+    return data.results; // devuelve array de {name, url}
+  }
+  catch (error) {
+    console.log(error);
+    return []; // devuelve array vacio si hay algun error, evita ruptura de la web
+  }
 };
 
 export const detallesDePokemons = async (lista) => {
-  const promesas = lista.map(pokemon => fetch(pokemon.url).then(res => res.json()));
-  
- 
-  const data = await Promise.all(promesas);
-  return data; // devuelve array con los detalles de cada una de los pokemons
+  try {
+    // Creamos un array de promesas
+    const promesas = lista.map(pokemon =>
+      fetch(pokemon.url)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`Error al obtener detalles de ${pokemon.name}: ${res.status}`);
+          }
+          return res.json();
+        })
+    );
+
+    // Esperamos que todas las promesas se resuelvan
+    const data = await Promise.all(promesas);
+    return data; // array con detalles completos
+  } catch (error) {
+    console.error(error);
+    return []; // Devuelve array vacío si hay error
+  }
 };
+
+export const filtrarPokemons = async (id, name) => {
+
+  try {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id || name}`);
+    if (!res.ok) {
+      throw new Error(`Error al obtener el Pokémon: ${id || name} status ${res.status}`)
+    }
+    const data = await res.json();
+    return data;
+
+  } catch (error){
+     console.log(error);
+    return []; // devuelve array vacio si hay algun error, evita ruptura de la web
+  }
+}
