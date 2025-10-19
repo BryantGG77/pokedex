@@ -58,7 +58,7 @@ export const Main = ({ pokemonFiltrado, resetFiltro }) => {
           <>
             <img
               className="max-w-[120px] mb-4"
-              src="\src\assets\error.png"
+              src="/error.png"
               alt="Error"
             />
             <p className="text-center text-black sm:text-lg md:text-xl lg:text-2xl mb-4">
@@ -101,7 +101,7 @@ export const Main = ({ pokemonFiltrado, resetFiltro }) => {
             <>
               <img
                 className="max-w-[120px] mb-4 rounded"
-                src="\src\assets\pokemonNoEncontrado.webp"
+                src="/pokemonNoEncontrado.webp"
                 alt="Pokemon no encontrado"
               />
               <p className="text-center text-black sm:text-lg md:text-xl lg:text-2xl mb-4">
