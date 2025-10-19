@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { filtrarPokemons } from "../../Api";
 
-export const Browser = () => {
+export const Browser = ({filtro}) => {
 
     const [valor, setValor] = useState("");
 
@@ -9,8 +10,10 @@ export const Browser = () => {
         setValor(e.target.value)
     }
 
-    const manejadorEnvioForm = (e) => {
+    const manejadorEnvioForm = async (e) => {
         e.preventDefault();
+        const data = await filtrarPokemons(valor);
+        filtro(data);
     }
 
 

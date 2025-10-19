@@ -2,10 +2,15 @@ import { useEffect, useState } from "react";
 import Card from "../card/card";
 import { listaDePokemons, detallesDePokemons } from "../../Api";
 
-export const Main = () => {
+export const Main = ({pokemonFiltrado}) => {
+
   const [pokemons, setPokemons] = useState([]);
+
+  // Manejador de renderizado de loading y error en el front
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  const listaAMostrar = pokemonFiltrado ? [pokemonFiltrado] : pokemons;
 
   const cargarPokemons = async () => {
     try {
@@ -70,7 +75,7 @@ export const Main = () => {
           </>
         )}
 
-        {!loading && !error && pokemons.map((pokemon) => (
+        {!loading && !error && listaAMostrar.map((pokemon) => (
           <Card
             key={pokemon.id}
             id={pokemon.id}
@@ -78,7 +83,7 @@ export const Main = () => {
             image={pokemon.sprites.front_default}
             alt={pokemon.name}
             types={pokemon.types.map((t) => t.type.name)}
-            stats={{
+            stats={{ // Si el la PokeAPI no hay stats, esta logica garantiza que no rompa la APP
               hp: pokemon.stats[0]?.base_stat || 0,
               attack: pokemon.stats[1]?.base_stat || 0,
               defense: pokemon.stats[2]?.base_stat || 0,

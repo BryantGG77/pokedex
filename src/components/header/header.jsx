@@ -1,6 +1,6 @@
 import { Browser } from "../browser/browser";
 
-export const Header = () => {
+export const Header = ({filtro}) => {
   return (
     <header className="flex flex-col justify-center items-center gap-4 w-full py-8 px-3 sm:px-4 bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 text-center overflow-hidden">
 
@@ -12,7 +12,7 @@ export const Header = () => {
         Descubre y explora todos los Pokémon de la primera generación
       </p>
 
-      <Browser />
+      <Browser filtro={filtro}/>
     </header>
   );
 };
