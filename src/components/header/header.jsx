@@ -1,18 +1,15 @@
 import { Browser } from "../browser/browser";
 
-export const Header = ({filtro}) => {
+export const Header = ({ filtro }) => {
   return (
-    <header className="flex flex-col justify-center items-center gap-4 w-full py-8 px-3 sm:px-4 bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 text-center overflow-hidden">
+    <header className="flex flex-col justify-center items-center gap-4 w-full py-10 px-4 bg-gradient-to-br from-cyan-300 via-blue-500 to-indigo-300
+ text-center">
+      <img className="max-w-[300px]" src="\src\assets\logo.png" alt="PokéDex logo" />
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-500 break-words">
-        Pokédex
-      </h1>
-
-      <p className="text-gray-700 sm:text-lg md:text-xl lg:text-2xl max-w-md sm:max-w-xl">
+      <p className="text-black lg:text-2xl md:text-xl sm:text-lg">
         Descubre y explora todos los Pokémon de la primera generación
       </p>
-
-      <Browser filtro={filtro}/>
+      <Browser filtro={filtro} />
     </header>
   );
 };

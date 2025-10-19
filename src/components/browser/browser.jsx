@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { filtrarPokemons } from "../../Api";
 
-export const Browser = ({filtro}) => {
+export const Browser = ({ filtro }) => {
 
     const [valor, setValor] = useState("");
 
@@ -13,8 +13,10 @@ export const Browser = ({filtro}) => {
     const manejadorEnvioForm = async (e) => {
         e.preventDefault();
         const data = await filtrarPokemons(valor);
-        filtro(data);
-    }
+        filtro(data); // data será null si no encontró Pokémon
+    };
+
+
 
 
     return (

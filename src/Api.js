@@ -38,21 +38,20 @@ export const detallesDePokemons = async (lista) => {
 };
 
 export const filtrarPokemons = async (idOrName) => {
-  // validar que haya un valor
   if (!idOrName) return null;
 
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName.toLowerCase()}`);
-
     if (!res.ok) {
-      
+      // devuelve null sin lanzar error
       return null;
     }
 
     const data = await res.json();
     return data; 
   } catch (error) {
-    console.error("Error al obtener el Pokémon:", error);
-    return null; // para no romper la app
+    // Solo loguea errores de red reales
+    console.error("Error de red:", error);
+    return null;
   }
 };

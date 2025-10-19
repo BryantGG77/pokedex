@@ -1,7 +1,8 @@
 const Card = ({ id, name, image, types, stats }) => {
   return (
-    <div className="rounded-lg shadow-lg overflow-hidden relative h-full min-h-[340px] transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:scale-[1.02] bg-gradient-to-br from-red-400 via-rose-500 to-red-500 hover:from-rose-400 hover:via-red-500 hover:to-rose-600 text-white">
-      
+    <div className="rounded-lg shadow-md overflow-hidden relative h-full min-h-[340px] transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:scale-[1.02] bg-gradient-to-br from-emerald-100 via-teal-200 to-cyan-100 hover:from-emerald-200 hover:via-teal-300 hover:to-cyan-200 text-gray-800">
+
+
       {/* Imagen */}
       <div className="relative pt-10 px-10 flex items-center justify-center">
         <div

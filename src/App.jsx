@@ -5,17 +5,23 @@ import { Main } from './components/main/main'
 import { useState } from 'react'
 
 function App() {
+  // 🔹 Estado global para almacenar el Pokémon filtrado
+  const [pokemonFiltrado, setPokemonFiltrado] = useState();
 
-  const [pokemonFiltrado, setPokemonFiltrado] = useState(null);
-
+  // 🔹 Recibe el resultado del filtrado desde Browser
   const filtro = (data) => {
-    setPokemonFiltrado(data);
+    setPokemonFiltrado(data || null);
+  };
+
+  // 🔹 Restablece el filtro (para volver a mostrar todas las cards cuando no haya resultado)
+  const resetFiltro = () => {
+    setPokemonFiltrado(undefined);
   };
 
   return (
     <>
-      <Header filtro={filtro}/>
-      <Main pokemonFiltrado={pokemonFiltrado}/>
+      <Header filtro={filtro} />
+      <Main pokemonFiltrado={pokemonFiltrado} resetFiltro={resetFiltro} />
       <Footer />
     </>
   )
