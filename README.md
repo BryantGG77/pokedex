@@ -5,9 +5,18 @@ El proyecto fue creado principalmente con fines de **aprendizaje**, integrando c
 
 ---
 
-## 🚀 Demo
+## 🚀 Demo y capturas del proyecto
 
 👉 [Pokédex en Vercel](https://pokedex-two-pi.vercel.app)
+
+<img width="1866" height="1077" alt="1" src="https://github.com/user-attachments/assets/31fad4a0-29d7-4a68-8fbd-e1c0077f0911" />
+
+<img width="1006" height="1073" alt="2" src="https://github.com/user-attachments/assets/9b16b21f-62dc-4e97-bb13-c44fcc8f4abd" />
+
+<img width="555" height="1074" alt="3" src="https://github.com/user-attachments/assets/f5e42eff-b357-4abb-8314-6e85454e58dd" />
+
+<img width="561" height="1078" alt="4" src="https://github.com/user-attachments/assets/ab99f5b0-9e97-4a10-8b7c-13390884dd54" />
+
 
 ---
 
