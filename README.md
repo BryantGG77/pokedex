@@ -62,3 +62,11 @@ npm run dev
 
 # o abre en tu navegador la URL que te muestre la consola
 normalmente: (http://localhost:5173)
+```
+---
+
+## 👨‍💻 Autor
+
+Brayan
+📧 brayanvr.dev@gmail.com
+🌐 https://github.com/BryantGG77
