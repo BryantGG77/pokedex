@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { filtrarPokemons } from "../../Api";
 
@@ -7,13 +7,13 @@ export const Browser = ({ filtro }) => {
     const [valor, setValor] = useState("");
 
     const actualizadorInput = (e) => {
-        setValor(e.target.value)
+        setValor(e.target.value.toLowerCase())
     }
 
     const manejadorEnvioForm = async (e) => {
         e.preventDefault();
         const data = await filtrarPokemons(valor);
-        filtro(data); // data será null si no encontró Pokémon
+        filtro(data);
     };
 
 
@@ -26,7 +26,7 @@ export const Browser = ({ filtro }) => {
             </button>
 
             <input
-                className="text-gray-700 placeholder-gray-400 flex-1 outline-none text-xs sm:text-sm md:text-base bg-transparent"
+                className="text-gray-700 lowercase placeholder-gray-400 flex-1 outline-none text-xs sm:text-sm md:text-base bg-transparent"
                 type="text"
                 placeholder="Buscar Pokémon..."
                 value={valor}

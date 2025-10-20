@@ -43,14 +43,12 @@ export const filtrarPokemons = async (idOrName) => {
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName.toLowerCase()}`);
     if (!res.ok) {
-      // devuelve null sin lanzar error
       return null;
     }
 
     const data = await res.json();
     return data; 
   } catch (error) {
-    // Solo loguea errores de red reales
     console.error("Error de red:", error);
     return null;
   }

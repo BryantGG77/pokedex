@@ -32,15 +32,15 @@ export const Main = ({ pokemonFiltrado, resetFiltro }) => {
   }, []);
 
   const listaAMostrar = (() => {
-    if (pokemonFiltrado === null) return []; // búsqueda sin resultados
-    if (pokemonFiltrado) return [pokemonFiltrado]; // búsqueda con resultados
-    return pokemons; // sin filtro (lista completa)
+    if (pokemonFiltrado === null) return [];
+    if (pokemonFiltrado) return [pokemonFiltrado]; 
+    return pokemons; 
   })();
 
   const contenedorClases =
     loading || error || listaAMostrar.length === 0
       ? "flex flex-col items-center justify-center w-full py-20 gap-4"
-      : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6";
+      : "grid px-10 place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6";
 
   return (
     <main className="w-full mx-auto px-4 py-8 bg-gray-50 min-h-screen">
@@ -81,12 +81,13 @@ export const Main = ({ pokemonFiltrado, resetFiltro }) => {
         {!loading && !error && (
           listaAMostrar.length > 0 ? (
             listaAMostrar.map((pokemon) => (
-              <>
+              
                 <Card
                   key={pokemon.id}
+                  title={`Las habilidades de ${pokemon.name} son: ${pokemon.abilities.map(a => a.ability.name).join(', ')}`}
                   id={pokemon.id}
                   name={pokemon.name}
-                  image={pokemon.sprites.front_default}
+                  image={pokemon.sprites.other.dream_world.front_default}
                   alt={pokemon.name}
                   types={pokemon.types.map((t) => t.type.name)}
                   stats={{
@@ -95,7 +96,7 @@ export const Main = ({ pokemonFiltrado, resetFiltro }) => {
                     defense: pokemon.stats[2]?.base_stat || 0,
                   }}
                 />
-              </>
+              
             ))
           ) : (
             <>

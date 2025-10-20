@@ -21,7 +21,7 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
       className={`
         fixed bottom-4 right-4 sm:bottom-6 sm:right-6 
-        bg-gradient-to-br from-cyan-300 via-blue-500 to-indigo-300 hover:from-sky-400 hover:via-teal-400 hover:to-cyan-500 text-white 
+        bg-gradient-to-br from-cyan-300 via-blue-700 to-indigo-300 hover:from-sky-400 hover:via-teal-400 hover:to-cyan-500 text-white 
         p-3 sm:p-4 rounded-full shadow-lg 
         transition-all duration-300
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}
