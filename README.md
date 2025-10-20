@@ -1,16 +1,64 @@
-# React + Vite
+# 🔴 Pokédex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React**, **TailwindCSS** y **PokeAPI**, cuyo propósito es permitir al usuario explorar, filtrar y visualizar información de Pokémon de forma dinámica y responsiva.  
+El proyecto fue creado principalmente con fines de **aprendizaje**, integrando conceptos clave de React, asincronía en JavaScript y consumo de APIs públicas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Demo
 
-## React Compiler
+👉 [Pokédex en Vercel](https://pokedex-two-pi.vercel.app)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🧩 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React** – Librería para construir la interfaz de usuario.  
+- 💨 **TailwindCSS** – Framework CSS para un diseño moderno y responsivo.  
+- 🎮 **PokeAPI** – API pública usada para obtener datos de los Pokémon.  
+- ⚡ **Vite** – Herramienta de desarrollo rápida para proyectos React.  
+- 🎨 **React Icons** – Biblioteca de íconos para embellecer la interfaz.
+
+---
+
+## 🎯 Objetivo del proyecto
+
+El objetivo principal es **aprender y reforzar** conocimientos en:
+- Manejo de componentes en React.
+- Uso de hooks (`useState`, `useEffect`).
+- Consumo de APIs externas.
+- Implementación de paginación y filtrado dinámico.
+- Creación de una interfaz **100% responsiva** con TailwindCSS.
+
+---
+
+## 🧠 Funcionalidades principales
+
+- 🔍 **Búsqueda por nombre o ID** de Pokémon.  
+- 🧩 **Filtrado por tipo** (agua, fuego, planta, etc.).  
+- 📄 **Paginación** para navegar entre grupos de Pokémon.  
+- ⚡ **Visualización de estadísticas**, habilidades y tipos.  
+- ❌ **Manejo de errores y estados de carga.**  
+- 📱 **Diseño responsivo** (enfoque *mobile-first*).  
+
+---
+
+## ⚙️ Instalación y uso local
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+
+```bash
+# Clona el repositorio
+git clone https://github.com/BryantGG77/pokedex.git
+
+# Entra en la carpeta del proyecto
+cd pokedex
+
+# Instala las dependencias
+npm install
+
+# Ejecuta el entorno de desarrollo
+npm run dev
+
+# o abre en tu navegador la URL que te muestre la consola
+normalmente: (http://localhost:5173)
