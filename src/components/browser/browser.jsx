@@ -6,7 +6,7 @@ export const Browser = ({ filtro }) => {
 
     const [valor, setValor] = useState("");
 
-    const actualizadorInput = (e) => {
+    const actualizadorInput = (e) => {// almacena el valor del evento del onchange del input en el estado
         setValor(e.target.value.toLowerCase())
     }
 
