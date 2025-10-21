@@ -6,6 +6,8 @@ import { useState } from 'react'
 import ScrollToTopButton from './components/ScrollToTop/ScrollToTopButton'
 
 function App() {
+  // Maneja el pokemon filtrado que viene como parametro desde el header
+  // con el valor del input
   const [pokemonFiltrado, setPokemonFiltrado] = useState();
 
   const filtro = (data) => {

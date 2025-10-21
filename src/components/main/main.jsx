@@ -4,9 +4,11 @@ import { listaDePokemons, detallesDePokemons, tiposDePokemons, obtenerPokemonsPo
 
 export const Main = ({ pokemonFiltrado, resetFiltro }) => {
   const [pokemons, setPokemons] = useState([]); // Maneja el listado de Pokemons
+  
   const [loading, setLoading] = useState(true); // Estado que determina en qué momento se renderiza el mensaje cargando pokemons
   const [error, setError] = useState(false); // Estado que determina si hubo un error en la carga
-  const [tipos, setTipos] = useState([]); // Estado que maneja los tipos de pokemons
+  
+  const [tipos, setTipos] = useState([]); // Estado que maneja los tipos de pokemons mapeados en el select
   const [tipoSeleccionado, setTipoSeleccionado] = useState(""); // Tipo seleccionado en el select
 
   const [page, setPage] = useState(0); // Página actual
@@ -15,6 +17,7 @@ export const Main = ({ pokemonFiltrado, resetFiltro }) => {
   // Cargar pokemons según el tipo y la página
   const cargarPokemons = async () => {
     try {
+      // Estado del loading en true para renderizar el spinner de carga
       setLoading(true);
       setError(false);
 
